@@ -21,6 +21,11 @@ Everything not listed in the previus section
 8. If not, go to the [AppleALC supported codecs][applealc] page, search with Cmd+F (Cmd is the Windows key) to find your audio driver codec, and save the possible layouts onto your desktop (a cool macOS feature, select and hold the text for a while and drag it onto your desktop to save it). Now in Finder, go into your EFI partition, if you didn't name it, it's probably called NO NAME, and go into EFI, OC, and open config.plist. Now use Cmd+F to search for "alcid=" without quotes, and change the number to one of the supported codecs you have in the file on your desktop, save, and reboot. Check if sound is working again, and if not, change the alcid to another number from the supported codecs, save and reboot, and repeat this until the audio is working.
 9. Enjoy!
 
+# How to update to a new macOS version
+If it's a small update, like from 14.0 to 14.1, it's as simple as going into the settings and updating it in the software update menu.
+However, if it is a bigger update like from 14.0 to 15.0, you can't do that, because it won't let you download for some reason. Instead, you have to go to the App Store, search up the update by it's name and download the full installer (it will redirect you to the settings) and replac your EFI folder with a newer version after I've released it. After that, you can open the Install macOS xxx app, and follow the steps to install the update.
+
+These steps might change as I haven't gotten to test it on an actual update except for Ventura and it didn't work this way, but I may have just messed up something else. I will test it again once macOS 15 comes out.
 # Credits
 [devboloji][devboloji] for the base EFI
 
