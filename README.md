@@ -22,11 +22,28 @@ Everything not listed in the previus section
 9. Enjoy!
 
 # Credits
-[devboloji][baseefi] for the base EFI
+[devboloji][devboloji] for the base EFI
 
 [Olarila][installer] for the installer
 
+[OpenIntelWireless][intelwireless] for Wi-Fi and Bluetooth kexts
 
-[baseefi]: https://github.com/devboloji/Infinix-Hackintosh-Opencore-Guide
+[acidanthera][acidanthera] for a lot of kexts!
+
+[KingOfFright][kingoffright] for it's ACPIBatteryManager (battery status) kext fork. An earlier fork is made by [RehabMan][rehabman] and the original is by [gsly][gsly].
+
+Apple for macOS
+
+...And many others!
+
+If you like the project, star this and [Infinix-Hackintosh-Opencore-Guide][devboloji]. Also consider donating to [Olarila][installer]!
+
+
+[devboloji]: https://github.com/devboloji/Infinix-Hackintosh-Opencore-Guide
 [installer]: https://www.olarila.com/topic/6278-olarila-vanilla-images-macos-installer/
 [applealc]: https://github.com/acidanthera/AppleALC/wiki/Supported-codecs
+[intelwireless]: https://github.com/OpenIntelWireless/
+[acidanthera]: https://github.com/acidanthera
+[kingoffright]: https://github.com/KingOfFright/OS-X-ACPI-Battery-Driver
+[rehabman]: https://github.com/RehabMan/OS-X-ACPI-Battery-Driver
+[gsly]: https://github.com/gsly/OS-X-ACPI-Battery-Driver
