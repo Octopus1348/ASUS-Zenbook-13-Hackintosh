@@ -12,10 +12,13 @@ Managing keyboard backlight: You have to turn it on to your desired intensity in
 Detecting that the laptop is charging: It will still show the battery level, and that it's draining, just that if you plug it in, it wont show charging, and it won't update the % when charging, you need to reboot.
 
 Bluetooth is a bit buggy: If you try to connect to a Bluetooth device, and see that Bluetooth just turned off, you can't turn it back on until a reboot. But after that the device will be connected.
+
+
+If you are able to fix any of these or find a non-listed issue, please create a fork, edit the nessesarry stuff and file a pull request.
 # What's working
-Everything not listed in the previus section
+Everything not listed in the previus section.
 # How to install
-1. First go to [the installer website][installer], and select the latest version I support (see in the releases tab). I recommend downloading the torrent as it is fast. It will redirect you to a site called linkvertise, turn off your adblocker here, and click on free access with ads. Click on "I'm interested" then on "Explore web page" and on the webpage wait a few seconds, then close the tab and go back to linkvertise. Now click on the tiny "I already completed this step" button, and now you have access to the download.
+1. First go to [the installer website][installer], and select the latest version I support (see in the releases tab). I recommend downloading the torrent as it is fast. You will now be redirected to a site called linkvertise, turn off your adblocker here, and click on free access with ads. Click on "I'm interested" then on "Explore web page" and on the webpage wait a few seconds, then close the tab and go back to linkvertise. Now click on the tiny "I already completed this step" button, and now you have access to the download.
 2. After you've downloaded it, prepare a USB that is at least 16 GBs in size, and attach it to the computer. In this step everything on the USB will be erased, so back them up before proceeding. Now download and install BalenaEtcher and and inside it, select the .raw file you just downloaded, then select the USB device, and click Flash. This will take some time.
 3. Now prepare the partitions. Use something like GParted on a live Linux USB, or other partition software on Windows. If you want to dual-boot (which I recommend, I love both Linux and macOS), also give space to the future macOS (I think you'll need minimum 40 GBs), it can be any filesystem because we will format it as APFS later anyway. Also give some space (like 200 MBs) to a new EFI partition formatted as FAT32, and copy my EFI folder there. Make sure to unzip it, and that the EFI folder inside the partition contains the Boot and OC folders, not another EFI. If it does, rename the EFI/EFI/ folder to something else, and move it onto the root of the USB drive, delete the EFI folder you moved it out from, and name it back to EFI.
 4. Now, reboot your computer, and press the UEFI key (for me, it's F2, but if it doesn't work, try other Fn keys, Escape or delete). Press F8 to select the boot device, and select your EFI partition (not the USB!), most likely called UEFI OS, and when you see the options, select "Install macOS XXX" with an orange Apple. It can take a minute to boot, don't worry.
@@ -23,7 +26,8 @@ Everything not listed in the previus section
 6. Now double-click the Install macOS XXX button, continue, accept the agreement, in which they specifically tell you only to install on a Mac, and choose the partition you just named macOS (or any other name) and continue. This will take some time, so grab a cup of c̶o̶f̶f̶e̶e̶ water while you wait.
 7. After it installed and booted, go trough the setup, and check if audio (and microphone) is working. If it is, skip step 8.
 8. If not, go to the [AppleALC supported codecs][applealc] page, search with Cmd+F (Cmd is the Windows key) to find your audio driver codec, and save the possible layouts onto your desktop (a cool macOS feature, select and hold the text for a while and drag it onto your desktop to save it). Now in Finder, go into your EFI partition, if you didn't name it, it's probably called NO NAME, and go into EFI, OC, and open config.plist. Now use Cmd+F to search for "alcid=" without quotes, and change the number to one of the supported codecs you have in the file on your desktop, save, and reboot. Check if sound is working again, and if not, change the alcid to another number from the supported codecs, save and reboot, and repeat this until the audio is working.
-9. Enjoy!
+9. Maybe even install a PC keyboard layout like [this Hungarian PC keyboard layout for Mac][hungarocell]. Search online to find more layouts. Tough I stopped using that layout, because I want to get used to where special characters are on Mac. (I will give this computer to my sister when I will have a Mac, so even then I can maintain this)
+10. Enjoy!
 
 # How to update to a new macOS version
 If it's a small update, like from 14.0 to 14.1, it's as simple as going into the settings and updating it in the software update menu.
@@ -56,3 +60,4 @@ If you like the project, star this and [Infinix-Hackintosh-Opencore-Guide][devbo
 [kingoffright]: https://github.com/KingOfFright/OS-X-ACPI-Battery-Driver
 [rehabman]: https://github.com/RehabMan/OS-X-ACPI-Battery-Driver
 [gsly]: https://github.com/gsly/OS-X-ACPI-Battery-Driver
+[hungarocell]: https://github.com/kodfodrasz/macos-hungarian-pc-keyboard-layout
