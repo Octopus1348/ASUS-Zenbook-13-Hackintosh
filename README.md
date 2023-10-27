@@ -3,11 +3,15 @@ This is a pre-built OpenCore Hackintosh EFI for Zenbook 13 laptops. This has bee
 
 Find out your audio driver codec before installing, it should be something like ALC*** with Realtek and CX**** with Conexant. Search up a tutorial on how for your OS online (you'll see why in step 7).
 # What's not working
-Sleep. You'll have to disable it by running "sudo pmset disablesleep 1" in the Terminal app.
+Sleep: You'll have to disable it by running `sudo pmset disablesleep 1` in the Terminal app. Keep in mind that the screen can still turn off after a few minutes or after you close the lid.
 
-Detecting that the laptop is charging. It will still show the battery level, and that it's draining, just if you plug it in, it wont show, and if you charged over your % before charging, it won't show higher % until you reboot.
+Touchpad Numpad: No fix avalible.
 
-Bluetooth is a bit buggy. If you try to connect to a Bluetooth device, and see that Bluetooth just turned off, you can't turn it back on until a reboot. But after that the device will be connected.
+Managing keyboard backlight: You have to turn it on to your desired intensity in Linux or Windows and then reboot to macOS. At least it turns off when you close the lid, and then turns back on (probably because hardware manages that).
+
+Detecting that the laptop is charging: It will still show the battery level, and that it's draining, just if you plug it in, it wont show, and if you charged over your % before charging, it won't show higher % until you reboot.
+
+Bluetooth is a bit buggy: If you try to connect to a Bluetooth device, and see that Bluetooth just turned off, you can't turn it back on until a reboot. But after that the device will be connected.
 # What's working
 Everything not listed in the previus section
 # How to install
