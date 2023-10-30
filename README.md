@@ -1,5 +1,5 @@
 # ASUS Zenbook 13 Hackintosh
-This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J model.
+This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J model, but also should work with others.
 
 Find out your audio driver codec before installing, it should be something like ALC*** with Realtek and CX**** with Conexant. Search up a tutorial on how for your OS online (you'll see why in step 7).
 # What's not working
@@ -11,7 +11,7 @@ Managing keyboard backlight: You have to turn it on to your desired intensity in
 
 Detecting that the laptop is charging: It will still show the battery level, and that it's draining, just that if you plug it in, it wont show charging, and it won't update the % when charging, you need to reboot.
 
-Bluetooth is a bit buggy: If you try to connect to a Bluetooth device, and see that Bluetooth just turned off, you can't turn it back on until a reboot. But after that the device will be connected.
+Bluetooth is a bit buggy: If you try to connect to a Bluetooth device and it immidiatly dissconnects, type `sudo purge` in the terminal, unpair the device, and pair it again.
 
 
 If you are able to fix any of these or find a non-listed issue, please create a fork, edit the nessesarry stuff and file a pull request.
@@ -28,7 +28,7 @@ Disable secure boot: Go into the UEFI setup by rebooting your computer and holdi
 5. After it loaded, select the language, click Continue, and double-click Disk Utility, click on this button: ![the button](https://github.com/Octopus1348/ASUS-Zenbook-13-Hackintosh/assets/105970916/47c4620a-775d-4049-8299-03e1b8703908), and select "Show all devices", now if you wanted to dual-boot, select the macOS partition (NOT THE EFI) it's mostly identifiable by the size, click Erase and name it something like macOS, then proceed with the deletion. If you didn't want to dual-boot, do the same, just with your previus OS partition. After it finished, click Done, and the red window button to go back.
 6. Now double-click the Install macOS XXX button, continue, accept the agreement, in which they specifically tell you only to install on a Mac, and choose the partition you just named macOS (or any other name) and continue. This will take some time, so grab a cup of c̶o̶f̶f̶e̶e̶ water while you wait. The computer will turn off miltiple times while installing, but that is normal. If it turns off, you can pull out the USB drive (DON'T PULL IT OUT IF ONLY THE SCRREN TURNED OFF!), turn the computer back on, and the installation should automatically continue. These turn-offs can also happen during a macOS update if I remember correctly.
 7. After it installed and booted, go trough the setup, and check if audio (and microphone) is working. If it is, skip step 8.
-8. If not, go to the [AppleALC supported codecs][applealc] page, search with Cmd+F (Cmd is the Windows key) to find your audio driver codec, and save the possible layouts onto your desktop (a cool macOS feature, select and hold the text for a while and drag it onto your desktop to save it). Now in Finder, go into your EFI partition, if you didn't name it, it's probably called NO NAME, and go into EFI, OC, and open config.plist. Now use Cmd+F to search for "alcid=" without quotes, and change the number to one of the supported codecs you have in the file on your desktop, save, and reboot. Check if sound is working again, and if not, change the alcid to another number from the supported codecs, save and reboot, and repeat this until the audio is working.
+8. If not, go to the [AppleALC supported codecs][applealc] page, search with Cmd+F (Cmd is the Windows key) to find your audio driver codec, and save the possible layouts onto your desktop (a cool macOS feature, select and hold the text for a while and drag it onto your desktop to save it). Install OpenCore Configurator. Now in Finder, go into your EFI partition, if you didn't name it, it's probably called NO NAME, and go into EFI, OC, and open config.plist using OpenCore Configurator. Now go to the NVRAM tab, select `7C436110-AB2A-4BBB-A880-FE41995C9F82` and double-click the value of `boot-args`. Change the value of `alcid` to the number of one of the supported codecs you have in the file on your desktop, save, and reboot. Check if sound is working again, and if not, change the alcid to another number from the supported codecs, save and reboot, and repeat this until the audio is working.
 9. Maybe even install a PC keyboard layout like [this Hungarian PC keyboard layout for Mac][hungarocell]. Search online to find more layouts. Tough I stopped using that layout, because I want to get used to where special characters are on Mac. (I will give this computer to my sister when I will have a Mac, so even then I can maintain this)
 10. Enjoy!
 
