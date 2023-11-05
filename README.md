@@ -1,5 +1,5 @@
 # ASUS Zenbook 13 Hackintosh
-This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J model, but also should work with others.
+This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J (aka UX325J) model, but also should work with others, the closer your model is to mine, the better. My CPU is Intel i5 Ice Lake. If you want more info about my computer, just search it up, I don't think other info is that important.
 
 Find out your audio driver codec before installing, it should be something like ALC*** with Realtek and CX**** with Conexant. Search up a tutorial on how for your OS online (you'll see why in step 7).
 # What's not working
