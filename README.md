@@ -9,8 +9,6 @@ Touchpad Numpad: No fix avalible.
 
 Managing keyboard backlight: You have to turn it on to your desired intensity in Linux or Windows and then reboot to macOS. At least it turns off when you close the lid, and then turns back on (probably because hardware manages that).
 
-Detecting that the laptop is charging: It will still show the battery level, and that it's draining, just that if you plug it in, it wont show charging, and it won't update the % when charging, you need to reboot.
-
 Bluetooth is a bit buggy: If you try to connect to a Bluetooth device and it immidiatly dissconnects, type `sudo purge` in the terminal, unpair the device, and pair it again.
 
 
