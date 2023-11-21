@@ -11,6 +11,8 @@ Managing keyboard backlight: You have to turn it on to your desired intensity in
 
 Bluetooth is a bit buggy: If you try to connect to a Bluetooth device and it immidiatly dissconnects, type `sudo purge` in the terminal, unpair the device, and pair it again.
 
+Sometimes Settings app not starting: Same fix as the Bluetooth one.
+
 
 If you are able to fix any of these or find a non-listed issue, please create a fork, edit the nessesarry stuff and file a pull request.
 # What's working
@@ -40,7 +42,7 @@ If it's a small update, like from 14.0 to 14.1, it's as simple as going into the
 
 However, if it is a bigger update like from 14.0 to 15.0, you can't do it his way, it won't let you download for some reason. Instead, you have to go to the App Store, search up the update by it's (code)name and download the full installer (it will redirect you to the settings) and then replace your EFI folder with a newer version after I've released it. Only start the install process after I've released a new EFI, or do it yourself if I take a long time (doing yourself has some risks though, so I recommend you make a Time Machine backup before doing that)! Just downloading before I haven't released a new one yet and quitting the installer is okay. After that, you can open the Install macOS xxx app, and follow the steps to install the update.
 
-These steps might change as I haven't gotten to test it on an actual update except for Ventura and it didn't work this way, but I may have just messed up something else. I will test it again once macOS 15 comes out.
+These steps might change as I haven't gotten to test it on an actual update except for Ventura and my EFI was a little different then, but it may have been fixed now. I will test it again once macOS 15 comes out.
 # Credits
 [devboloji][devboloji] for the base EFI
 
