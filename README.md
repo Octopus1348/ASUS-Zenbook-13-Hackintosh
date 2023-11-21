@@ -30,8 +30,14 @@ Disable secure boot: Go into the UEFI setup by rebooting your computer and holdi
 9. Maybe even install a PC keyboard layout like [this Hungarian PC keyboard layout for Mac][hungarocell]. Search online to find more layouts. Tough I stopped using that layout, because I want to get used to where special characters are on Mac. (I will give this computer to my sister when I will have a Mac, so even then I can maintain this)
 10. Enjoy!
 
+# I get gray screen in recovery mode, what do I do?
+If you get a gray screen in recovery, it also means that you may not see updates in settings, and for me, I couldn't even update from the full macOS installer because it said "A snapshot is currently set to boot that is not the currently booted snapshot.", so follow this easy way to fix that.
+
+Reset your NVRAM from the boot entry "Reset NVRAM.efi". If it doesn't work, try resetting your NVRAM in your installer USB's "Reset NVRAM" boot entry.
+
 # How to update to a new macOS version
-If it's a small update, like from 14.0 to 14.1, it's as simple as going into the settings and updating it in the software update menu.
+If it's a small update, like from 14.0 to 14.1, it's as simple as going into the settings and updating it in the software update menu. If there is a macOS update, but Settings says "Your system is up to date.", refer to "I get gray screen in recovery mode, what do I do?".
+
 However, if it is a bigger update like from 14.0 to 15.0, you can't do it his way, it won't let you download for some reason. Instead, you have to go to the App Store, search up the update by it's (code)name and download the full installer (it will redirect you to the settings) and then replace your EFI folder with a newer version after I've released it. Only start the install process after I've released a new EFI, or do it yourself if I take a long time (doing yourself has some risks though, so I recommend you make a Time Machine backup before doing that)! Just downloading before I haven't released a new one yet and quitting the installer is okay. After that, you can open the Install macOS xxx app, and follow the steps to install the update.
 
 These steps might change as I haven't gotten to test it on an actual update except for Ventura and it didn't work this way, but I may have just messed up something else. I will test it again once macOS 15 comes out.
