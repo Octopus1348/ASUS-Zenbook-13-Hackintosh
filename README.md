@@ -1,7 +1,15 @@
 # ASUS Zenbook 13 Hackintosh
-This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J (aka UX325J) model, but also should work with others, the closer your model is to mine, the better. My CPU is Intel i5 Ice Lake. If you want more info about my computer, just search it up, I don't think other info is that important.
+This is a pre-built OpenCore Hackintosh EFI for ASUS Zenbook 13 laptops. This has been tested on the BX325J (aka UX325J) model, but also should work with others as long as they have an Intel Ice Lake processor, the closer your model is to mine, the better. You can even go as far as trying this on a completely different laptop with an Ice Lake processor, maximum it doesn't boot or some other things don't work. My CPU is Intel i5 Ice Lake. If you want more info about my computer, just search it up, I don't think other info is that important.
 
 Find out your audio driver codec before installing, it should be something like ALC*** with Realtek and CX**** with Conexant. Search up a tutorial on how for your OS online (you'll see why in step 7).
+
+# Notes
+* I am not responsible for bricked devices, data lost,
+thermonuclear war, or you getting fired because macOS didn't boot.
+* Please follow the instructions properly and take a backup of your data before proceeding.
+* YOU are choosing to make these modifications, and if
+you point the finger at me for messing up your device, I will laugh at you.
+
 # What's not working
 Sleep: You'll have to disable it by running `sudo pmset disablesleep 1` in the Terminal app. Keep in mind that the screen can still turn off after a few minutes or after you close the lid.
 
@@ -9,16 +17,19 @@ Touchpad Numpad: No fix avalible.
 
 Managing keyboard backlight: You have to turn it on to your desired intensity in Linux or Windows and then reboot to macOS. At least it turns off when you close the lid, and then turns back on (probably because hardware manages that).
 
-Bluetooth is a bit buggy: If you try to connect to a Bluetooth device and it immidiatly dissconnects, type `sudo purge` in the terminal, unpair the device, and pair it again.
+Bluetooth is a bit buggy: If you try to connect to a Bluetooth device and it immidiatly dissconnects, type `sudo purge` in the terminal (then type in your password), unpair the device, and pair it again.
 
-Sometimes Settings app not starting: Same fix as the Bluetooth one.
+Sometimes Settings app not starting: Similar fix to the Bluetooth one, just type `sudo purge` into the terminal (then type in your password) and after it finished, open Settings again.
 
 
 If you are able to fix any of these or find a non-listed issue, please create a fork, edit the nessesarry stuff and file a pull request.
 # What's working
 Everything not listed in the previus section.
 # Prerequisites
+A brain with at least 100 IQ.
+
 If you use Windows, make sure BitLocker is turned off.
+
 Disable secure boot: Go into the UEFI setup by rebooting your computer and holding F2 (if it just boots into the OS, you can try other keys on the top of your keyboard). After you see the cool UEFI screen (it should look like mine if you have an ASUS), press F7 to enter advanced mode, go to the Security tab, then into "Secure boot" and change "Secure boot control" to Disabled. Now press F10 and then Ok to save your changes and reboot.
 # How to install
 1. Download the latest EFI from the releases page. Then, go to the [the installer website][installer], and download the same version you downloaded from releases. I recommend downloading the torrent as it is fast, but you will need a torrent client. You will now be redirected to a site called linkvertise, turn off your adblocker here, and click on free access with ads. Click on "I'm interested" then on "Explore web page" and on the webpage wait a few seconds, then close the tab and go back to linkvertise. Now click on the tiny "I already completed this step" button, and now you have access to the download.
